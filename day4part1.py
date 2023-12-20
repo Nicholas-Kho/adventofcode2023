@@ -1,0 +1,2 @@
+import re
+print(sum((2**(len([number for number in re.split(r'\s+', (line.split("|")[0][8:-1])) if number in re.split(r'\s+', (line.split("|")[1][1:len(line.split("|")[1])-1]))]) - 1) if len([number for number in re.split(r'\s+', (line.split("|")[0][8:-1])) if number in re.split(r'\s+', (line.split("|")[1][1:len(line.split("|")[1])-1]))]) >= 1 else 0) for line in open("day4part1.txt").readlines()))
